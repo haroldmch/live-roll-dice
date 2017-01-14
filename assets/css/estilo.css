@@ -1,0 +1,255 @@
+/*codigo de reset*/
+* {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	font-style: normal;
+	text-decoration: none;
+	font-weight: normal;
+	line-height:1em;
+	box-sizing: border-box;
+	outline: none;
+	font-family: helvetica;
+}
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type=number] {
+    -moz-appearance:textfield;
+}
+/*general*/
+html, body{
+	height: 100%;
+	width: 100%;
+}
+body{
+	background-image: url(../img/back.jpg);
+	background-position: center;
+	background-size: cover;
+	background-attachment: fixed;
+}
+/*estilos*/
+header{
+	width: 100%;
+	background-color: #402b10;
+	color: #FFF0D9;
+	padding: 10px;
+	text-align: center;
+	position: fixed;
+	z-index: 3;
+	box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+section{
+	width: 50%;
+	height: 100%;
+	float: left;
+	position: absolute;
+	overflow: hidden;
+	padding: 52px 0 0 0;
+	text-align: center;
+}
+section:last-child{
+	right: 0;
+	overflow: scroll;
+	overflow-x: hidden;
+	box-shadow: -7px -2px 10px rgba(0,0,0,0.15);
+	z-index: 2;
+}
+	section h2{
+		width: 100%;
+		margin: 0 auto;
+		padding: 25px 20px 10px;
+		box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+		text-align: left;
+		position: fixed;
+		background-image: url(../img/back.jpg);
+		background-position: center;
+		background-size: cover;
+		background-attachment: fixed;
+		color: #5D3405;
+		z-index: 1;
+	}
+#dados,
+#historial{
+	padding-top: 70px;
+	background-color: rgba(187, 137, 78, 0.50);
+	overflow: hidden;
+}
+#dados{
+	padding: 17% 20px 0;
+	height: 100%;
+	position: relative;
+}
+	#dados div{
+		height: 50px;
+		margin-bottom: 10px;
+		display: -webkit-box;
+		display: -webkit-flex;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-pack: center;
+		-webkit-justify-content: center;
+		-ms-flex-pack: center;
+		justify-content: center;
+	}
+	#dados input[type="number"]{
+		height: 50px;
+		width: 70px;
+		line-height: 50px;
+		padding: 10px 20px;
+		background-color: #bb894e;
+		border: none;
+		border-top: 1px solid #765125;
+		color: #402b10;
+		font-size: 18px;
+	}
+	#dados button{
+		height: 50px;
+		width: 80px;
+		letter-spacing: 1px;
+		cursor: pointer;
+		border: none;
+		color: #d9a465;
+		text-transform: uppercase;
+		font-size: 13px;
+	}	
+		#dados button{
+			background-color: #402b10;
+		}
+		#dados button:hover{
+			background-color: #33220b;
+		}
+		#dados button:active{
+			background-color: #1f1507;
+		}
+
+	.dtal{
+		width: 80px;
+		height: 50px;
+		text-align: right!important;
+		padding: 0 10px;
+		line-height: 50px;
+		color: #402b10;
+    	text-shadow: 0px -1px #bb894e;
+		font-weight: bold;
+	}
+#historial{
+	padding-top: 85px;
+	background-color: rgba(187, 137, 78, 0.50);
+	overflow: hidden;
+}
+	#historial img{
+		max-height: 60px;
+		margin: 0 10px;
+		top: 50%;
+		margin-bottom: -25px;
+	}
+	#historial div{
+		padding: 10px 10px 20px;
+		line-height: 30px;
+		margin-bottom: 10px;
+		color: #402b10;
+		min-height: 90px;
+		border-bottom: 1px dotted #B18046;
+		position: relative;
+	}
+	#historial div:last-child{
+		border-bottom: none;
+	}
+		#historial div strong{
+			font-weight: bold;
+			margin-right: 10px;
+			letter-spacing: 1px;
+		}
+		#historial div span.total{
+			font-weight: bold;
+			text-transform: uppercase;
+			font-size: 20px;
+			line-height: 60px;
+		}
+		#historial div span:last-child{
+			position: absolute;
+			bottom: 10px;
+			right: 10px;
+			font-size: 13px;
+			letter-spacing: 2px;
+			color: #91642e;
+			display: none;
+		}
+		#historial div:hover span:last-child{
+			display: inline;
+		}
+
+/*dado
+		#dados div:nth-of-type(1) button{
+			background-color: #1390c9!important;
+		}
+		#dados div:nth-of-type(1) button:hover{
+			background-color: #007ab2!important;
+		}
+		#dados div:nth-of-type(1) button:active{
+			background-color: #026693!important;
+		}
+
+		#dados div:nth-of-type(2) button{
+			background-color: #cc620f!important;
+		}
+		#dados div:nth-of-type(2) button:hover{
+			background-color: #b75000!important;
+		}
+		#dados div:nth-of-type(2) button:active{
+			background-color: #9b4400!important;
+		}
+
+		#dados div:nth-of-type(3) button{
+			background-color: #54ad28!important;
+		}
+		#dados div:nth-of-type(3) button:hover{
+			background-color: #42891e!important;
+		}
+		#dados div:nth-of-type(3) button:active{
+			background-color: #2c5c15!important;
+		}
+
+		#dados div:nth-of-type(4) button{
+			background-color: #783bb9!important;
+		}
+		#dados div:nth-of-type(4) button:hover{
+			background-color: #6922b5!important;
+		}
+		#dados div:nth-of-type(4) button:active{
+			background-color: #5307a5!important;
+		}
+
+		#dados div:nth-of-type(5) button{
+			background-color: #c73b56;
+		}
+		#dados div:nth-of-type(5) button:hover{
+			background-color: #aa2f47;
+		}
+		#dados div:nth-of-type(5) button:active{
+			background-color: #9a1932;
+		}
+
+		#dados button:nth-of-type(6){
+			background-color: #402b10;
+		}
+		#dados button:nth-of-type(6):hover{
+			background-color: #33220b;
+		}
+		#dados button:nth-of-type(6):active{
+			background-color: #1f1507;
+		}
+
+		#dados button:nth-of-type(7){
+			background-color: #402b10;
+		}
+		#dados button:nth-of-type(7):hover{
+			background-color: #33220b;
+		}
+		#dados button:nth-of-type(7):active{
+			background-color: #1f1507;
+		}
+*/

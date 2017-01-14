@@ -1,0 +1,22 @@
+<IfModule mod_rewrite.c> 
+	RewriteEngine On
+	RewriteBase /
+	IndexIgnore *
+
+    #Obligar a usar WWW
+        #RewriteCond %{HTTP_HOST} !^www\.
+        #RewriteRule ^(.*)$ http://www.%{HTTP_HOST}/$1 [R=301,L]
+	RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+	RewriteRule ^(.*)$ http://%1%{REQUEST_URI} [R=301,QSA,NC,L]
+    #Eliminar index.php
+        RewriteCond %{REQUEST_FILENAME} !-f
+        RewriteCond %{REQUEST_FILENAME} !-d
+        RewriteRule ^(.*)$ index.php/$1 [L]
+        ErrorDocument 404 index.php
+</IfModule>
+<Files 403.shtml>
+order allow,deny
+allow from all
+</Files>
+
+deny from 188.143.232.21
